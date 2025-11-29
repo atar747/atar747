@@ -142,15 +142,34 @@
             font-weight: bold;
         }
 
-        .placeholder {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            height: 150px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
+        /* تنسيق الصورة المضافة */
+        .added-image {
+            text-align: center;
+            margin: 40px 0;
+            padding: 25px;
+            background: linear-gradient(135deg, #f9f5ff 0%, #e9d5ff 100%);
+            border-radius: 15px;
+            border: 3px solid #7c3aed;
+            box-shadow: 0 10px 30px rgba(124, 58, 237, 0.2);
+        }
+
+        .added-image img {
+            max-width: 100%;
+            max-height: 500px;
             border-radius: 12px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            border: 2px solid #7c3aed;
+        }
+
+        .added-image-caption {
+            margin-top: 20px;
+            font-size: 1.3em;
+            color: #7c3aed;
+            font-weight: bold;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            display: inline-block;
         }
 
         @media (max-width: 768px) {
@@ -172,6 +191,19 @@
 
             .image-item img {
                 height: 120px;
+            }
+
+            .added-image {
+                margin: 25px 0;
+                padding: 20px;
+            }
+
+            .added-image img {
+                max-height: 350px;
+            }
+
+            .added-image-caption {
+                font-size: 1.1em;
             }
         }
     </style>
@@ -233,6 +265,12 @@
                 <p>
                     Les Steam Machines étaient une idée intéressante pour changer le monde du jeu. Même si elles n'ont pas vraiment réussi, elles ont aidé Valve à améliorer SteamOS et à créer plus tard le Steam Deck, un appareil très populaire aujourd'hui.
                 </p>
+            </div>
+
+            <!-- الصورة المضافة الجديدة -->
+            <div class="added-image">
+                <img src="https://h.top4top.io/p_3620g468g1.jpg" alt="بلخادم محمد ورحال">
+                <div class="added-image-caption">بلخادم محمد ورحال</div>
             </div>
         </div>
 
