@@ -13,23 +13,38 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 20px;
             line-height: 1.8;
+            background: url('https://a.top4top.io/p_3620w6gx81.jpg') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+        }
+
+        /* طبقة شفافة فوق الخلفية */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.15);
+            z-index: -1;
         }
 
         .container {
             max-width: 900px;
             margin: 0 auto;
-            background: white;
+            background: rgba(255, 255, 255, 0.92);
             border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             overflow: hidden;
+            backdrop-filter: blur(5px);
         }
 
         header {
-            background: linear-gradient(135deg, #7c3aed 0%, #9333ea 100%);
+            background: linear-gradient(135deg, rgba(124, 58, 237, 0.9) 0%, rgba(147, 51, 234, 0.9) 100%);
             color: white;
             padding: 40px;
             text-align: center;
@@ -70,13 +85,13 @@
         .section {
             margin-bottom: 35px;
             padding: 25px;
-            background: #f9f5ff;
+            background: rgba(249, 245, 255, 0.8);
             border-radius: 12px;
             border-right: 5px solid #7c3aed;
         }
 
         .footer {
-            background: #7c3aed;
+            background: rgba(124, 58, 237, 0.9);
             color: white;
             text-align: center;
             padding: 25px;
@@ -86,10 +101,12 @@
         .author-info {
             background: white;
             color: #7c3aed;
-            padding: 15px;
-            border-radius: 8px;
+            padding: 20px;
+            border-radius: 10px;
             margin-top: 15px;
             font-weight: bold;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         .images {
@@ -147,7 +164,7 @@
             text-align: center;
             margin: 40px 0;
             padding: 25px;
-            background: linear-gradient(135deg, #f9f5ff 0%, #e9d5ff 100%);
+            background: rgba(249, 245, 255, 0.9);
             border-radius: 15px;
             border: 3px solid #7c3aed;
             box-shadow: 0 10px 30px rgba(124, 58, 237, 0.2);
@@ -169,6 +186,66 @@
             padding: 10px;
             background: white;
             border-radius: 8px;
+            display: inline-block;
+        }
+
+        /* تنسيق جديد للمعلومات في الفوتر */
+        .footer-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .footer-image {
+            flex: 0 0 auto;
+        }
+
+        .footer-image img {
+            width: 120px;
+            height: 120px;
+            border-radius: 12px;
+            border: 3px solid white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer-info {
+            flex: 1;
+            min-width: 280px;
+            text-align: center;
+        }
+
+        .school-name {
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: #7c3aed;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .students-names {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .class-info {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            color: #555;
+            font-weight: bold;
+        }
+
+        .project-info {
+            font-size: 1em;
+            font-style: italic;
+            color: #7c3aed;
+            margin-top: 8px;
+            padding: 8px 15px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 6px;
             display: inline-block;
         }
 
@@ -205,6 +282,24 @@
             .added-image-caption {
                 font-size: 1.1em;
             }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-image img {
+                width: 100px;
+                height: 100px;
+            }
+
+            .school-name {
+                font-size: 1.2em;
+            }
+
+            .students-names {
+                font-size: 1.1em;
+            }
         }
     </style>
 </head>
@@ -216,19 +311,19 @@
         </header>
 
         <div class="content">
-            <!-- قسم الصور المحسّن -->
+            <!-- قسم الصور المحسّن بالصور الجديدة -->
             <div class="image-grid">
                 <div class="image-item">
-                    <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=400&h=300&fit=crop" alt="Steam Machine et accessoires">
-                    <div class="image-caption">Steam Machine complète</div>
+                    <img src="https://j.top4top.io/p_36204gohx1.jpg" alt="Steam Machine Design 1">
+                    <div class="image-caption">Design Steam Machine 1</div>
                 </div>
                 <div class="image-item">
-                    <img src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=400&h=300&fit=crop" alt="Console de jeu">
-                    <div class="image-caption">Console de jeu moderne</div>
+                    <img src="https://c.top4top.io/p_3620qp55t1.jpg" alt="Steam Machine Design 2">
+                    <div class="image-caption">Design Steam Machine 2</div>
                 </div>
                 <div class="image-item">
-                    <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=400&h=300&fit=crop" alt="Équipement gaming">
-                    <div class="image-caption">Équipement gaming</div>
+                    <img src="https://b.top4top.io/p_3620bpsc81.jpg" alt="Steam Machine Design 3">
+                    <div class="image-caption">Design Steam Machine 3</div>
                 </div>
                 <div class="image-item">
                     <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop" alt="Manette de jeu">
@@ -236,11 +331,11 @@
                 </div>
             </div>
 
-            <!-- الصور الأصلية المعدلة -->
+            <!-- الصور الأصلية المعدلة بالصور الجديدة -->
             <div class="images">
-                <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=600&h=400&fit=crop" alt="Steam Machine setup">
-                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=600&h=400&fit=crop" alt="Steam Controller">
-                <img src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=600&h=400&fit=crop" alt="Console gaming">
+                <img src="https://j.top4top.io/p_36204gohx1.jpg" alt="Steam Machine Design 1">
+                <img src="https://c.top4top.io/p_3620qp55t1.jpg" alt="Steam Machine Design 2">
+                <img src="https://b.top4top.io/p_3620bpsc81.jpg" alt="Steam Machine Design 3">
             </div>
 
             <div class="section">
@@ -277,8 +372,17 @@
         <div class="footer">
             <p>Recherche académique</p>
             <div class="author-info">
-                <p>بلخادم محمد عبد السلام | رحال أنس | السنة الثانية تسير واقتصاد</p>
-                <p>Projet de langue française - Premier semestre</p>
+                <div class="footer-content">
+                    <div class="footer-image">
+                        <img src="https://j.top4top.io/p_3620081f41.jpg" alt="ثانوية المجاهد محمد بلونار">
+                    </div>
+                    <div class="footer-info">
+                        <div class="school-name">ثانوية المجاهد محمد بلونار</div>
+                        <div class="students-names">بلخادم محمد عبد السلام<br>رحال أنس</div>
+                        <div class="class-info">قسم : الثانية تسير واقتصاد</div>
+                        <div class="project-info">Projet de langue française - Premier semestre</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
